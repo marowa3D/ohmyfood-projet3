@@ -1,0 +1,245 @@
+body, html {
+    margin: 0;
+    font-family: Roboto,sans-serif;
+    scroll-behavior: smooth;
+}
+#logo {
+display: flex;
+justify-content: center;
+padding: 1rem;
+box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+position: relative;
+z-index: 1000;
+}
+.local {
+display: flex;
+justify-content: center;
+padding: 1.25rem 1rem;
+background-color: #f3f3f3;
+font-size: 1.2rem;
+position: relative;
+}
+.local__icon{
+	margin-right: 1rem;
+}
+.local__text{
+	font-weight: 700;
+}
+.titres{
+	padding: 2rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+.titres__hero{
+margin: 0;
+}
+.titres__text{
+	font-weight: 300;
+    margin: 1.5rem 0;
+}
+.titres__btn{
+	border: 0;
+    padding: .75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(
+0deg
+,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    transition-duration: .25s;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+
+}
+.filtres{
+	padding: 2rem 1rem;
+
+    &__titre {
+        margin-top: 0;	
+    }
+
+    &__menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: compteListe;
+
+        &__item {
+            padding: 1.5rem;
+            margin: 1rem 0 1rem .75rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+            border-radius: 1.25rem;
+            background-color: #f6f6f6;
+            display: flex;
+            position: relative;
+
+            &::before {
+                counter-increment: compteListe 1;
+                content: counter(compteListe) " ";
+                background: #9356dc;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                position: absolute;
+                left: -.75rem;
+            }
+
+            &__icon {
+                margin-right: 1rem;
+                color: #7e7e7e;
+            }
+        }
+    }
+}
+.bloc{
+	max-width: 1280px;
+    margin: auto;
+    position: relative;	
+}
+
+.restaurants{
+background-color: #f6f6f6;
+padding: 2rem 1rem;
+}
+.cartes{
+display: grid;
+grid-template-columns: repeat(1,1fr);
+column-gap: 2rem;
+row-gap: 2rem;
+}
+.carte{
+
+background-color: #fff;
+border-radius: 1rem;
+position: relative;
+text-decoration: none;
+color: inherit;
+display: block;
+
+    &__img {
+        height: 12rem;
+        width: 100%;
+        border: 0 solid transparent;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: none;
+        object-fit: cover;
+    }
+}
+
+.carte__badge{
+	background-color: #99e2d0;
+    color: #1b6150;
+    padding: .5rem;
+    border-radius: .125rem;
+    position: absolute;
+    top: 1rem;
+    right: .75rem;
+}
+.carte__footer{
+	padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.carte__contenu{
+    // flex: 1;
+    width: 100%;
+	display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.carte__titre{
+	margin: 0 0 .25rem;
+}
+.carte__soustitre{
+	margin: 0;
+}
+.menu__btn{
+	height: 2rem;
+    width: 2rem;
+    background-color: initial;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+
+    &__icon{
+        position: absolute;
+
+        &like{
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+}
+.carte__iconlike{
+	transition-duration: .25s;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.menu__btn::before,
+.carte__iconlike{
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.footer{
+    background-color: #353535;
+}
+.bloc__footer{
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+.footer .bloc__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+} 
+.footer__logo{
+    color: #fff;
+    font-family: Shrikhand,"cursive";
+    font-size: 1.2rem;
+    margin: 0 0 1rem;  
+}
+.footer__listes{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu__footer{
+    margin: 0.5rem 0;
+    color: #f3f3f3;
+    text-decoration: none;
+}
+.menu__footer:first-child{
+    margin-top: 0;
+}
+.footer__link{
+    color: #fff;
+    text-decoration: none;
+}
+.footer__icon{
+    width: 1.2rem;
+    margin-right: 0.5rem;
+
+}
+.fa-2x {
+    font-size: 2em;
+}
